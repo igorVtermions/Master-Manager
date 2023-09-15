@@ -23,3 +23,30 @@ export const Title = styled.h2`
     font-weight: 600;
     color: black;
 `;
+
+export const Bonus = styled.div`
+    display: flex;
+    gap: .5rem;
+`;
+
+export const BonusAdded = styled.ul`
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    list-style: none;
+`;
+
+export const BonusItem = styled.li`
+    padding: .3rem .7rem;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: .5rem;
+
+    svg{
+        cursor: pointer;
+    }
+`;
