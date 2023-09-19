@@ -11,6 +11,7 @@ export default function CharProvider({children}){
     const [maxHP, setMaxHP] = useState();
     const [bonus, setBonus] = useState('');
     const [charBonus, setCharBonus] = useState([]);
+    const [character, setCharacter] = useState([]);
 
     const closeAddChar = () =>{
         setAddChar(false)
@@ -26,8 +27,26 @@ export default function CharProvider({children}){
         setCharBonus(filteredBonus);
     }
     
+    const addCharacter = () =>{
+        const charInfo = {
+            name: charName,
+            image: imageUrl,
+            class: charClass,
+            hp: maxHP,
+            attributes: charBonus,
+        }
+        setCharacter((prev) => [...prev, charInfo])
+        setCharName('')
+        setImageUrl('')
+        setCharClass('')
+        setMaxHP('')
+        setCharBonus([])
+
+        console.log(character)
+    }
+
     return(
-        <CharContext.Provider value={{addChar, setAddChar, closeAddChar, charName, setCharName, bonus, setBonus, charBonus, addBonus, removeBonus, imageUrl, setImageUrl, charClass, setCharClass, maxHP, setMaxHP}}>
+        <CharContext.Provider value={{addChar, setAddChar, closeAddChar, charName, setCharName, bonus, setBonus, charBonus, addBonus, removeBonus, imageUrl, setImageUrl, charClass, setCharClass, maxHP, setMaxHP, addCharacter, character}}>
             {children}
         </CharContext.Provider>
     )

@@ -7,7 +7,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 
 export default function ModalContent() {
 
-  const {charName, setCharName, bonus, setBonus, charBonus, addBonus, removeBonus, imageUrl, setImageUrl, charClass, setCharClass, maxHP, setMaxHP} = useContext(CharContext);
+  const {charName, setCharName, bonus, setBonus, charBonus, addBonus, removeBonus, imageUrl, setImageUrl, charClass, setCharClass, maxHP, setMaxHP, addCharacter} = useContext(CharContext);
 
   return (
     <Container>
@@ -24,7 +24,7 @@ export default function ModalContent() {
             <BonusAdded>
               {charBonus.map((bonus) => <BonusItem key={bonus}>{bonus} <AiOutlineClose size={13} onClick={() =>removeBonus(bonus)}/></BonusItem>)}
             </BonusAdded>
-            <Btn>Criar Personagem</Btn>
+            <Btn onClick={addCharacter}>Criar Personagem</Btn>
         </form>
     </Container>
   )
