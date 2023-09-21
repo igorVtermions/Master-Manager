@@ -14,4 +14,8 @@ export const Container = styled.section`
     h1{
         font-size: 2rem;
     }
+
+    @media(max-width: 800px){
+        flex-direction: column;
+    }
 `

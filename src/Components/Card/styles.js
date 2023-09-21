@@ -9,6 +9,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
   gap: 1rem;
 
   .baseInfo {
@@ -29,20 +30,37 @@ export const Container = styled.div`
 
   img {
     width: 18rem;
-    border-radius: 10rem;
+    height: 18rem;
+    border-radius: 50%;
+    object-fit: cover;
     position: absolute;
-    top: 19rem;
+    top: -9rem;
   }
-  
-  ul{
-    li{
-        font-size: 1.3rem;
-    }
-  }
-  .btn{
-    position: absolute;
-    bottom: 28rem;
+
+  .btn {
     width: 30rem;
     height: 5rem;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 17rem;
+  }
+`;
+
+export const Ul = styled.ul`
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    padding: 0.3rem 0.7rem;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 1rem;
   }
 `;
