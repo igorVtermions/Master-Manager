@@ -41,8 +41,6 @@ export default function CharProvider({children}){
         setCharClass('')
         setMaxHP('')
         setCharBonus([])
-
-        console.log(character)
     }
 
     return(

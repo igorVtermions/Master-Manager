@@ -50,7 +50,17 @@ export const Container = styled.div`
 `;
 
 export const Ul = styled.ul`
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
   li {
-    color: black;
+    padding: 0.3rem 0.7rem;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 1rem;
   }
 `;

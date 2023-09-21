@@ -11,9 +11,9 @@ export default function Card({ char }) {
       </div>
       <h2>Vida: {char.hp}</h2>
       <Ul>
-        {char.attributes.map((item, index) => (
-          <li key={index}>{item.attributes}</li>
-        ))}
+        {char.attributes.map((item) => 
+          <li key={item}>{item}</li>
+        )}
       </Ul>
       <Btn className="btn">Item</Btn>
     </Container>
