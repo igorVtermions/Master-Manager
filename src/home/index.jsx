@@ -30,7 +30,7 @@ export default function Home() {
         <ModalContent />
       </Modal>
       {character.map((char) => (
-        <Card char={char} />
+        <Card char={char} className="card-char"/>
       ))}
     </Container>
   );
