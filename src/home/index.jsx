@@ -31,7 +31,7 @@ export default function Home() {
       </Modal>
       {character.length == 0 && <h1>Nenhum personagem encontrado...</h1>}
       {character.map((char) => (
-        <Card char={char} />
+        <Card char={char} className="card-char"/>
       ))}
     </Container>
   );
