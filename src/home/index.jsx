@@ -5,7 +5,7 @@ import Modal from "react-modal";
 import { CharContext } from "../Context/CharContext";
 import "./modal.css";
 import ModalContent from "../Components/ModalContent";
-import Card from "../components/Card";
+import Card from "../Components/Card";
 
 Modal.setAppElement("#root");
 
@@ -29,6 +29,7 @@ export default function Home() {
       >
         <ModalContent />
       </Modal>
+      {character.length == 0 && <h1>Nenhum personagem encontrado...</h1>}
       {character.map((char) => (
         <Card char={char} />
       ))}

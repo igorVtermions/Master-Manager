@@ -6,8 +6,8 @@ export default function Card({ char }) {
     <Container>
       <img src={char.image} alt="imagem do personamgem" />
         <div className="baseInfo">
-        <h1>{char.name}</h1>
-        <h3>{char.class}</h3>
+          <h1>{char.name}</h1>
+          <h3>{char.class}</h3>
         </div>
         <h2>Vida: {char.hp}</h2>
         <ul>
