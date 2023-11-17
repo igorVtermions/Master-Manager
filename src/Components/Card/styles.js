@@ -12,6 +12,13 @@ export const Container = styled.div`
   position: relative;
   gap: 1rem;
 
+  .close-btn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
   .baseInfo {
     display: flex;
     align-items: center;

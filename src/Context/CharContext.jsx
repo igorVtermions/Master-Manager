@@ -43,6 +43,12 @@ export default function CharProvider({ children }) {
     setCharBonus([]);
   };
 
+  const deleteChar = (name) =>{
+    const filteredList = character.filter((char) => char.name !== name);
+
+    setCharacter(filteredList);
+  }
+
   return (
     <CharContext.Provider
       value={{
@@ -64,6 +70,7 @@ export default function CharProvider({ children }) {
         setMaxHP,
         addCharacter,
         character,
+        deleteChar
       }}
     >
       {children}
