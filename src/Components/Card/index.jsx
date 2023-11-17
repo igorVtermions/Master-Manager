@@ -1,9 +1,19 @@
+import { useContext } from "react";
 import Btn from "../Btn";
 import { Container, Ul } from "./styles";
+import { IoIosCloseCircle } from "react-icons/io";
+import { CharContext } from "../../Context/CharContext";
+
 
 export default function Card({ char }) {
+
+  const { deleteChar } = useContext(CharContext);
+
   return (
     <Container>
+      <div className="close-btn">
+        <IoIosCloseCircle size={30} onClick={() => deleteChar(char.name)} title="Excluir Personagem" />
+      </div>
       <img src={char.image} alt="imagem do personamgem" />
       <div className="baseInfo">
         <h1>{char.name}</h1>
